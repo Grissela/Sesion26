@@ -1,0 +1,43 @@
+<div class="w-full mx-auto my-6 my-[9rem]">
+    <div class="w-[50%] mx-auto shadow-lg shadow-gray-400 py-3">
+        <div class="" *ngFor="let data of datos">
+            <div class="" *ngIf="data.id == id">
+                <div class="flex p-3 mx-3">
+                    <i class="bi bi-person"></i>
+                    <p class="mx-3">Name: </p>
+                    <p> {{data.name}}</p>
+                </div>
+                
+                <div class="flex p-3 mx-3">
+                    <i class="bi bi-person"></i>
+                    <p class="mx-3">Username: </p>
+                    <p>{{data.username}}</p>
+                </div>
+
+                <div class="flex p-3 mx-3">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <p class="mx-3">Address: </p>
+                        <p class=""> {{data.address.street}} </p>
+                        <p class="px-1"> {{data.address.suite}} </p>
+                        <p class="px-1"> {{data.address.city}} </p>
+                        <p class="px-1">{{data.address.zipcode}} </p>
+                </div>
+                <div class="flex p-3 mx-3">
+                    <i class="bi bi-telephone-fill"></i>
+                    <p class="mx-3">Phone: </p>
+                    <p>{{data.phone}}</p>
+                </div>
+                <div class="flex p-3 mx-3">
+                    <i class="bi bi-browser-chrome"></i>
+                    <p class="mx-3">Website: </p>
+                    <p>{{data.website}}</p>
+                </div>
+
+                <div class="text-center">
+                    <button class="text-white bg-cyan-500 px-4 py-3
+       rounded shadow-lg shadow-gray-400 hover:bg-cyan-600"><a routerLink="/home">Regresar</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

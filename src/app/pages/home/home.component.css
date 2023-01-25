@@ -1,0 +1,8 @@
+.zoom:hover{
+    transition: .3s;
+    transform: scale(1.1);
+}
+
+i{
+    font-size: 17px
+}

@@ -1,0 +1,38 @@
+<div class="w-[80%] mx-auto my-[2rem] bg-slate-50 shadow-lg shadow-gray-400 rounded text-center">
+    <div class="flex flex-col">
+        <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+          <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+                <div class="overflow-hidden">
+                    <table class="min-w-full">
+                        <thead>
+                            <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-center">Name</th>
+                            <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-center">Username</th>
+                            <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-center">Email</th>
+                            <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-center">Address</th>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b text-center" *ngFor="let data of datos">
+                                    <!-- <p>{{data | json}}</p> -->
+                                <td class="text-xs text-gray-900 font-light  py-4 px-4">
+                                    {{data.name}}
+                                </td>
+                                <td class="text-xs text-gray-900 font-light  py-4 px-4">
+                                    {{data.username}}
+                                </td>
+                                <td class="text-xs text-gray-900 font-light  py-4 px-4">
+                                    {{data.email}}
+                                </td>
+                                <td class="text-xs text-gray-900 font-light  py-4 px-4">
+                                    {{data.address.street}} {{data.address.suite}} {{data.address.city}} {{data.address.zipcode}}
+                                </td>
+                                <td class="text-xs text-gray-900 font-light  py-4 px-4">
+                                    <a routerLink="/detalle/{{data.id}}"><button class="zoom"><i class="bi bi-three-dots bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700 "></i></button></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>
